@@ -31,8 +31,6 @@ public class Receta implements Serializable {
     @Basic(optional = false)
     @Column(name = "id_receta")
     private Integer idReceta;
-    @Column(name = "medico_nombre")
-    private String medicoNombre;
     @Column(name = "fecha_consulta")
     @Temporal(TemporalType.DATE)
     private Date fechaConsulta;
@@ -42,6 +40,26 @@ public class Receta implements Serializable {
     @Column(name = "receta_fechaFin")
     @Temporal(TemporalType.DATE)
     private Date recetafechaFin;
+    @Column(name = "id_paciente")
+    private int paciente;
+    @Column(name = "id_medico")
+    private int medico;
+
+    public int getMedico() {
+        return medico;
+    }
+
+    public void setMedico(int medico) {
+        this.medico = medico;
+    }
+
+    public int getPaciente() {
+        return paciente;
+    }
+
+    public void setPaciente(int paciente) {
+        this.paciente = paciente;
+    }
 
     public Receta() {
     }
@@ -56,14 +74,6 @@ public class Receta implements Serializable {
 
     public void setIdReceta(Integer idReceta) {
         this.idReceta = idReceta;
-    }
-
-    public String getMedicoNombre() {
-        return medicoNombre;
-    }
-
-    public void setMedicoNombre(String medicoNombre) {
-        this.medicoNombre = medicoNombre;
     }
 
     public Date getFechaConsulta() {
