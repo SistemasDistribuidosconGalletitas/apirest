@@ -5,6 +5,8 @@
  */
 package com.example.demo.Entidades;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Basic;
@@ -44,7 +46,10 @@ public class Receta implements Serializable {
     private int paciente;
     @Column(name = "id_medico")
     private int medico;
-
+    @Column(name = "nombre_medico")
+    private String nombreMedico;
+    @Column(name = "vigencia")
+    private boolean vigencia;
     public int getMedico() {
         return medico;
     }
@@ -52,6 +57,28 @@ public class Receta implements Serializable {
     public void setMedico(int medico) {
         this.medico = medico;
     }
+
+    public String getNombreMedico() {
+        return nombreMedico;
+    }
+
+    public void setNombreMedico(String nombreMedico) {
+        this.nombreMedico = nombreMedico;
+    }
+
+
+
+    public boolean isVigencia() {
+        return vigencia;
+    }
+
+    public void setVigencia(boolean vigencia) {
+        this.vigencia = vigencia;
+    }
+
+
+
+
 
     public int getPaciente() {
         return paciente;

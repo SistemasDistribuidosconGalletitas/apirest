@@ -36,6 +36,18 @@ public class Paciente implements Serializable {
     private String contrasenia;
     @Column(name = "telefono")
     private String telefono;
+    @Column(name = "nombre_usuario")
+    private String nombreUsuario;
+
+    public String getNombreUsuario() {
+        return nombreUsuario;
+    }
+
+    public void setNombreUsuario(String nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
+    }
+
+
     public Paciente() {
     }
 

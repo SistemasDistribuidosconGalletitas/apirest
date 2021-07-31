@@ -7,6 +7,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface PacientesRepositorio extends JpaRepository<Paciente, Integer> {
 
-    Paciente findByNombrePacienteAndContrasenia(String nombrePaciente, String contrasenia);
+    Paciente findByNombreUsuarioAndContrasenia(String nombreUsuario, String contrasenia);
 
 }

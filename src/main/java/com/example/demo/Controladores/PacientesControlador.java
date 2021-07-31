@@ -23,9 +23,9 @@ public class PacientesControlador {
     }
 
     @GetMapping("/pacientes/{nombre}/{contrasenia}")
-    public Paciente getPacienteByCorreoContrasenia(@PathVariable("nombre") String nombrePaciente,
+    public Paciente getPacienteByCorreoContrasenia(@PathVariable("nombre") String nombreUsuario,
                                                    @PathVariable("contrasenia") String contrasenia){
-    return pacientesRepositorio.findByNombrePacienteAndContrasenia(nombrePaciente,contrasenia);
+    return pacientesRepositorio.findByNombreUsuarioAndContrasenia(nombreUsuario,contrasenia);
 
     }
 }

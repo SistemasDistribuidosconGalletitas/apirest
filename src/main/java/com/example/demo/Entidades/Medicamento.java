@@ -28,6 +28,48 @@ public class Medicamento implements Serializable {
     @Basic(optional = false)
     @Column(name = "id")
     private Integer id;
+    @Column(name = "nombre")
+    private String nombre;
+    @Column(name = "tipo")
+    private String tipo;
+    @Column(name = "dosis")
+    private int dosis;
+    @Column(name = "aplicaciones")
+    private int aplicaciones;
+
+    public int getDosis() {
+        return dosis;
+    }
+
+    public void setDosis(int dosis) {
+        this.dosis = dosis;
+    }
+
+    public int getAplicaciones() {
+        return aplicaciones;
+    }
+
+    public void setAplicaciones(int aplicaciones) {
+        this.aplicaciones = aplicaciones;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+
 
     public Medicamento() {
     }
