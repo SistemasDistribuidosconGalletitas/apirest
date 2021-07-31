@@ -32,8 +32,27 @@ public class Paciente implements Serializable {
     private String nombrePaciente;
     @Column(name = "correo_electronico")
     private String correoElectronico;
-
+    @Column(name = "contrasenia")
+    private String contrasenia;
+    @Column(name = "telefono")
+    private String telefono;
     public Paciente() {
+    }
+
+    public String getContrasenia() {
+        return contrasenia;
+    }
+
+    public void setContrasenia(String contrasenia) {
+        this.contrasenia = contrasenia;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
 
     public Paciente(Integer id) {

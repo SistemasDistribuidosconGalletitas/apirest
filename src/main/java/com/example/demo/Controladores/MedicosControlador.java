@@ -29,11 +29,11 @@ public class MedicosControlador {
         return medicosRepositorio.findAll();
     }
 
-    @GetMapping("/medicos/ejemplo")
+    @GetMapping("/paciente/receta")
     public Map<String, String> sayHello() {
         HashMap<String, String> map = new HashMap<>();
         map.put("paciente", "Cristhian Enrique");
-        map.put("Medico", "Doctor Simi");
+        map.put("Medico", "Doctor Steven Strange");
         map.put("Fecha consulta","12/11/2021");
         map.put("medicamento", "Parecetamol");
         return map;
